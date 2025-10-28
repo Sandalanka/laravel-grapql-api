@@ -76,13 +76,21 @@ return [
         'default' => [
             'query' => [
                 // ExampleQuery::class,
+                'book' => App\GraphQL\Queries\BookQuery::class,
+                'books' => App\GraphQL\Queries\BooksQuery::class,
             ],
             'mutation' => [
-                // ExampleMutation::class,
+               // Create a book
+               'createBook' => App\GraphQL\Mutations\CreateBookMutation::class,
+               // update book
+               'updateBook' => App\GraphQL\Mutations\UpdateBookMutation::class,
+               // delete a book
+               'deleteBook' => App\GraphQL\Mutations\DeleteBookMutation::class,
             ],
             // The types only available in this schema
             'types' => [
                 // ExampleType::class,
+                'Book' => App\GraphQL\Types\BookType::class,
             ],
 
             // Laravel HTTP middleware

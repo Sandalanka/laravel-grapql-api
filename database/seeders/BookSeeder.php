@@ -9,8 +9,7 @@ use App\Models\Book;
 class BookSeeder extends Seeder
 {
     /**
-     * @return void
-     *
+     * Run the database seeds.
      */
     public function run(): void
     {
