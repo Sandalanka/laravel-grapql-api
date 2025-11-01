@@ -10,7 +10,8 @@ use Rebing\GraphQL\Support\Mutation;
 class UpdateBookMutation extends Mutation
 {
     protected $attributes = [
-        'name' => 'updateBook'
+        'name' => 'updateBook',
+//        'middleware' => ['auth:sanctum'],
     ];
 
     public function type(): Type
