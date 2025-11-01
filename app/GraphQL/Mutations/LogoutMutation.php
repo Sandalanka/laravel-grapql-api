@@ -11,7 +11,6 @@ class LogoutMutation extends Mutation
     protected $attributes = [
         'name' => 'logout',
         'description' => 'Logout user',
-        'middleware' => ['auth:sanctum'],
     ];
 
     public function type(): Type
