@@ -11,7 +11,6 @@ class DeleteBookMutation extends Mutation
     protected $attributes = [
         'name' => 'deleteBook',
         'description' => 'Delete a book',
-//        'middleware' => ['auth:sanctum'],
     ];
 
     public function type(): Type
