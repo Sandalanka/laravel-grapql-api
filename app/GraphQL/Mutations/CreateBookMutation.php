@@ -11,7 +11,6 @@ class CreateBookMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'createBook',
-        'middleware' => ['auth:sanctum'],
     ];
 
     public function type(): Type
