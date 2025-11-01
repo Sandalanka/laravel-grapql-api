@@ -10,7 +10,8 @@ use Rebing\GraphQL\Support\Facades\GraphQL;
 class CreateBookMutation extends Mutation
 {
     protected $attributes = [
-        'name' => 'createBook'
+        'name' => 'createBook',
+        'middleware' => ['auth:sanctum'],
     ];
 
     public function type(): Type

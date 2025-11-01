@@ -73,6 +73,18 @@ return [
     //  ]
     //
     'schemas' => [
+        'public' => [
+            'query' => [],
+            'mutation' => [
+                'register' => App\GraphQL\Mutations\RegisterMutation::class,
+                'login' => App\GraphQL\Mutations\LoginMutation::class,
+            ],
+            'types' => [
+                'User' => App\GraphQL\Types\UserType::class,
+            ],
+            'middleware' => [],
+            'method' => ['POST'],
+        ],
         'default' => [
             'query' => [
                 // ExampleQuery::class,
@@ -80,21 +92,19 @@ return [
                 'books' => App\GraphQL\Queries\BooksQuery::class,
             ],
             'mutation' => [
-               // Create a book
                'createBook' => App\GraphQL\Mutations\CreateBookMutation::class,
-               // update book
                'updateBook' => App\GraphQL\Mutations\UpdateBookMutation::class,
-               // delete a book
                'deleteBook' => App\GraphQL\Mutations\DeleteBookMutation::class,
+                'logout' => App\GraphQL\Mutations\LogoutMutation::class,
             ],
             // The types only available in this schema
             'types' => [
-                // ExampleType::class,
                 'Book' => App\GraphQL\Types\BookType::class,
+                'User' => App\GraphQL\Types\UserType::class,
             ],
 
             // Laravel HTTP middleware
-            'middleware' => null,
+            'middleware' => ['auth:sanctum'],
 
             // Which HTTP methods to support; must be given in UPPERCASE!
             'method' => ['GET', 'POST'],
