@@ -23,7 +23,7 @@ class LogoutMutation extends Mutation
         $user = Auth::user();
 
         if ($user) {
-            $user->tokens()->delete(); // revoke all tokens (for Sanctum)
+            $user->tokens()->delete();
             return true;
         }
 
