@@ -17,7 +17,7 @@ class LoginMutation extends Mutation
 
     public function type(): Type
     {
-        return Type::string(); // Return JWT or Sanctum token
+        return Type::string();
     }
 
     public function args(): array
@@ -38,7 +38,6 @@ class LoginMutation extends Mutation
             ]);
         }
 
-        // if using Laravel Sanctum:
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return $token;

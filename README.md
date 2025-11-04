@@ -8,6 +8,7 @@
 - MySQL database support
 - Example schema for CRUD operations
 - GraphiQL interface for testing
+- GraphiQL user authenticate
 
 ---
 
