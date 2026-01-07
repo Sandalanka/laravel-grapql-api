@@ -10,7 +10,7 @@ use Rebing\GraphQL\Support\Mutation;
 class UpdateBookMutation extends Mutation
 {
     protected $attributes = [
-        'name' => 'updateBook',
+        'name' => 'updateBook'
     ];
 
     public function type(): Type
@@ -43,7 +43,7 @@ class UpdateBookMutation extends Mutation
             ],
             'isbn' => [
                 'name' => 'isbn',
-                'type' =>  Type::nonNull(Type::string()),
+                'type' =>  Type::nonNull(Type::string())
             ],
         ];
     }

@@ -10,7 +10,7 @@ class DeleteBookMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'deleteBook',
-        'description' => 'Delete a book',
+        'description' => 'Delete a book'
     ];
 
     public function type(): Type

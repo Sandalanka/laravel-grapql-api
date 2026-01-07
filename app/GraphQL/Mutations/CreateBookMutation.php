@@ -13,37 +13,48 @@ class CreateBookMutation extends Mutation
         'name' => 'createBook',
     ];
 
+    /**
+     * @return Type
+     */
     public function type(): Type
     {
         return GraphQL::type('Book');
     }
 
+    /**
+     * @return array[]
+     */
     public function args(): array
     {
         return [
             'title' => [
                 'name' => 'title',
-                'type' =>  Type::nonNull(Type::string()),
+                'type' =>  Type::nonNull(Type::string())
             ],
             'author' => [
                 'name' => 'author',
-                'type' =>  Type::nonNull(Type::string()),
+                'type' =>  Type::nonNull(Type::string())
             ],
             'language' => [
                 'name' => 'language',
-                'type' =>  Type::nonNull(Type::string()),
+                'type' =>  Type::nonNull(Type::string())
             ],
             'year_published' => [
                 'name' => 'year_published',
-                'type' =>  Type::nonNull(Type::string()),
+                'type' =>  Type::nonNull(Type::string())
             ],
             'isbn' => [
                 'name' => 'isbn',
-                'type' =>  Type::nonNull(Type::string()),
+                'type' =>  Type::nonNull(Type::string())
             ],
         ];
     }
 
+    /**
+     * @param $root
+     * @param $args
+     * @return Book
+     */
     public function resolve($root, $args)
     {
         $book = new Book();
