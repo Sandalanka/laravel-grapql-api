@@ -12,7 +12,7 @@ class LoginMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'login',
-        'description' => 'Login user and get token',
+        'description' => 'Login user and get token'
     ];
 
     public function type(): Type
@@ -24,7 +24,7 @@ class LoginMutation extends Mutation
     {
         return [
             'email' => ['type' => Type::nonNull(Type::string())],
-            'password' => ['type' => Type::nonNull(Type::string())],
+            'password' => ['type' => Type::nonNull(Type::string())]
         ];
     }
 
@@ -34,7 +34,7 @@ class LoginMutation extends Mutation
 
         if (! $user || ! Hash::check($args['password'], $user->password)) {
             throw ValidationException::withMessages([
-                'email' => ['Invalid credentials'],
+                'email' => ['Invalid credentials']
             ]);
         }
 

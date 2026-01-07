@@ -10,7 +10,7 @@ class LogoutMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'logout',
-        'description' => 'Logout user',
+        'description' => 'Logout user'
     ];
 
     public function type(): Type
