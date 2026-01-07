@@ -12,7 +12,7 @@ class RegisterMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'register',
-        'description' => 'Register a new user',
+        'description' => 'Register a new user'
     ];
 
     public function type(): Type
@@ -25,7 +25,7 @@ class RegisterMutation extends Mutation
         return [
             'name' => ['type' => Type::nonNull(Type::string())],
             'email' => ['type' => Type::nonNull(Type::string())],
-            'password' => ['type' => Type::nonNull(Type::string())],
+            'password' => ['type' => Type::nonNull(Type::string())]
         ];
     }
 
@@ -34,7 +34,7 @@ class RegisterMutation extends Mutation
         $user = User::create([
             'name' => $args['name'],
             'email' => $args['email'],
-            'password' => Hash::make($args['password']),
+            'password' => Hash::make($args['password'])
         ]);
 
         return $user;
