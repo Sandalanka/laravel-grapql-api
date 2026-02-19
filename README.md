@@ -1,4 +1,4 @@
-# Laravel GraphQL API with MySQL
+# Laravel GraphQL API with MySQL new
 
 
 ## 🧩 Features
